@@ -1,0 +1,104 @@
+@charset "UTF-8";
+
+* {
+  color: #333;
+}
+
+body {
+  height: 100vh;
+  background: no-repeat center;
+  background-size:  cover;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.wrap {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+/* 날씨API */
+/* #weather {
+  margin-bottom: 20px;
+} */
+#weather .temp {
+  font-size: 20px;
+  text-align: center;
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+  padding: 20px 0;
+}
+
+/* 시간 */
+.container .date, .clock {
+  font-size: 25px;
+}
+
+/* 인사 */
+.container .greet {
+  display: flex;
+  align-items: center;
+  font-size: 30px;
+}
+
+.container .greet p {
+  margin-right: 20px;
+}
+
+.container .greet input {
+  width: 300px;
+  border: 0;
+  border-bottom: 2px solid #333;
+  font-size: 30px;
+  background: transparent;
+}
+
+.container .greet input:focus {
+  outline: none;
+}
+
+.container .greet input::placeholder {
+  color: #aaa;
+  font-size: 20px;
+}
+
+/* 투두리스트 */
+.container .todoContainer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 500px;
+  height: 280px;
+  overflow: auto;
+  border: 2px solid #aaa;
+  border-radius: 10px;
+  padding: 20px;
+}
+
+.container .todoContainer::-webkit-scrollbar {
+  display: none;
+}
+
+.container .todoContainer .inputContainer {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+}
+
+.container .todoContainer .inputContainer input {
+  width: 320px;
+  border: 0;
+  border-bottom: 2px solid #333;
+  font-size: 30px;
+  background: transparent;
+}
