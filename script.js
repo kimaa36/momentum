@@ -117,13 +117,19 @@ function createTodoItem(task) {
   listItem.classList.add('todoItem');
 
   const taskText = document.createElement('p');
+  taskText.classList.add('taskText');
   taskText.innerHTML = task;
+
+  const checkedBtn = document.createElement('button');
+  checkedBtn.classList.add('checkedBtn');
+  checkedBtn.innerHTML = '완료';
 
   const deleteBtn = document.createElement('button');
   deleteBtn.classList.add('deleteBtn');
-  deleteBtn.innerHTML = 'X';
+  deleteBtn.innerHTML = '삭제';
 
   listItem.appendChild(taskText);
+  listItem.appendChild(checkedBtn);
   listItem.appendChild(deleteBtn);
 
   // 할 일 삭제
@@ -138,6 +144,9 @@ function createTodoItem(task) {
 
   // 할 일 체크
   taskText.addEventListener('click', () => {
+    taskText.classList.toggle('checked');
+  });
+  checkedBtn.addEventListener('click', () => {
     taskText.classList.toggle('checked');
   });
   return listItem;

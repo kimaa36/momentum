@@ -9,22 +9,19 @@ body {
   background: no-repeat center;
   background-size:  cover;
   display: flex;
-  flex-direction: column;
+  flex-flow: column;
   justify-content: center;
   align-items: center;
 }
 
 .wrap {
   display: flex;
-  flex-direction: column;
+  flex-flow: column;
   justify-content: center;
   align-items: center;
 }
 
 /* 날씨API */
-/* #weather {
-  margin-bottom: 20px;
-} */
 #weather .temp {
   font-size: 20px;
   text-align: center;
@@ -32,7 +29,7 @@ body {
 
 .container {
   display: flex;
-  flex-direction: column;
+  flex-flow: column;
   justify-content: center;
   align-items: center;
   gap: 20px;
@@ -72,10 +69,16 @@ body {
   font-size: 20px;
 }
 
+/* 로그아웃 */
+.material-symbols-outlined {
+  font-size: 30px;
+  cursor: pointer;
+}
+
 /* 투두리스트 */
 .container .todoContainer {
   display: flex;
-  flex-direction: column;
+  flex-flow: column;
   align-items: center;
   width: 500px;
   height: 280px;
@@ -93,12 +96,89 @@ body {
   width: 100%;
   display: flex;
   justify-content: space-between;
+  position: sticky;
+  top: 0;
+  background: #fff;
+  border-radius: 10px;
 }
 
 .container .todoContainer .inputContainer input {
-  width: 320px;
   border: 0;
   border-bottom: 2px solid #333;
   font-size: 30px;
   background: transparent;
+  flex: 1;
+  margin-right: 10px;
+}
+
+.container .todoContainer .inputContainer input:focus {
+  outline: none;
+}
+
+.container .todoContainer .inputContainer input::placeholder {
+  color: #aaa;
+  font-size: 20px;
+}
+
+.container .todoContainer .inputContainer .addBtn {
+  border: 2px solid #333;
+  border-radius: 5px;
+  background-color: transparent;
+  cursor: pointer;
+  font-size: 20px;
+  line-height: 20px;
+}
+
+.container .todoContainer .inputContainer .addBtn:hover {
+  background: gray;
+  color: #fff;
+}
+
+.container .todoContainer .todoList {
+  width: 100%;
+  display: flex;
+  flex-flow: column;
+}
+
+.container .todoContainer .todoItem {
+  display: flex;
+  flex-wrap: nowrap;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 15px;
+  font-size: 24px;
+}
+
+.taskText {
+  width: 370px;
+  display: flex;
+  flex: 1;
+  font-size: 30px;
+  margin-right: 10px;
+  cursor: pointer;
+}
+
+.deleteBtn, .checkedBtn {
+  border: 1px solid #333;
+  border-radius: 5px;
+  background-color: transparent;
+  cursor: pointer;
+  font-size: 20px;
+}
+
+.checkedBtn {
+  margin-right: 10px;
+}
+
+.checkedBtn:hover {
+  background: paleturquoise;
+}
+
+.deleteBtn:hover {
+  background: red;
+  color: #fff;
+}
+
+.checked {
+  text-decoration: line-through;
 }
