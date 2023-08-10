@@ -2,6 +2,7 @@
 
 * {
   color: #333;
+  box-sizing: border-box;
 }
 
 body {
@@ -85,7 +86,6 @@ body {
   overflow: auto;
   border: 2px solid #aaa;
   border-radius: 10px;
-  padding: 20px;
 }
 
 .container .todoContainer::-webkit-scrollbar {
@@ -99,7 +99,8 @@ body {
   position: sticky;
   top: 0;
   background: #fff;
-  border-radius: 10px;
+  border-radius: 10px 10px 0 0;
+  padding: 20px 0 0;
 }
 
 .container .todoContainer .inputContainer input {
@@ -109,6 +110,7 @@ body {
   background: transparent;
   flex: 1;
   margin-right: 10px;
+  margin-left: 20px;
 }
 
 .container .todoContainer .inputContainer input:focus {
@@ -127,6 +129,7 @@ body {
   cursor: pointer;
   font-size: 20px;
   line-height: 20px;
+  margin-right: 20px;
 }
 
 .container .todoContainer .inputContainer .addBtn:hover {
@@ -138,6 +141,7 @@ body {
   width: 100%;
   display: flex;
   flex-flow: column;
+  padding: 20px;
 }
 
 .container .todoContainer .todoItem {
@@ -150,7 +154,7 @@ body {
 }
 
 .taskText {
-  width: 370px;
+  width: 350px;
   display: flex;
   flex: 1;
   font-size: 30px;
